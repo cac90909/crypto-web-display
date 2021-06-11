@@ -1,0 +1,12 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+        <title>{{ title }}</title>
+        <h1 class='ref'>Time of refresh: <div class='time'>{{ time }}</div></h1>
+    </head>
+    <body >
+            {% for key, value in dict_prices.items() %}
+                <div class='price'><p>{{ key }}: <b>{{ value }}</b></p></div>
+            {% endfor %}
+    </body>
+</html>
